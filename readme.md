@@ -44,7 +44,7 @@ Aplikasi ini adalah Sistem Informasi Penggajian (Payroll System) berbasis web ya
 
 ## 👥 Informasi Pengembang
 
-Aplikasi ini dikembangkan secara khusus sebagai pemenuhan syarat Tugas Akhir / Skripsi untuk memecahkan masalah sistem penggajian yang ada di Perusahaan Bumi Mas Gold.
+Aplikasi ini dikembangkan oleh **Rizaldi Indra Hermawan** (NRP: **191116013**) secara khusus sebagai pemenuhan syarat Tugas Akhir / Skripsi untuk memecahkan masalah sistem penggajian yang ada di Perusahaan Bumi Mas Gold.
 
 ---
 
