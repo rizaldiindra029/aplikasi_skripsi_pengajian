@@ -9,10 +9,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'payrol',
+	'hostname' => getenv('DB_HOST') !== false ? getenv('DB_HOST') : 'localhost',
+	'username' => getenv('DB_USER') !== false ? getenv('DB_USER') : 'root',
+	'password' => getenv('DB_PASS') !== false ? getenv('DB_PASS') : '',
+	'database' => getenv('DB_NAME') !== false ? getenv('DB_NAME') : 'payrol',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

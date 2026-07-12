@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: payrol_app
+    ports:
+      - "8000:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_NAME=payrol
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mysql:5.7
+    container_name: payrol_db
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=payrol
+    volumes:
+      - db_data:/var/lib/mysql
+      # Import otomatis dump sql saat database pertama kali dibuat
+      - ./payrol.sql:/docker-entrypoint-initdb.d/payrol.sql
+    restart: unless-stopped
+
+volumes:
+  db_data:
